@@ -2,32 +2,22 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Forms;
+using Metro_station_board;
 
 namespace Metro_station_board
 {
     class ObjectSensor
     {
-        private Timer timer;
+        private ObjectTrain train;
+        private long timer;
 
         // The time of needed arrival
-        private int endHours;
-        private int endMin;
-        private int endSec;
+        private int arrive_time;
 
-        // Departure time
-        private int startHours;
-        private int startMin;
-        private int startSec;
-        public ObjectSensor(int endHours,int endMin,int endSec)
+        public ObjectSensor(int endHours,int endMin,int endSec, ObjectTrain train)
         {
-            this.timer = new Timer();
-            this.startHours = 0;
-            this.startMin = 0;
-            this.startSec = 0;
-
-            this.endHours = endHours;
-            this.endMin = endMin;
-            this.endSec = endSec;
+            this.train = train;
+            this.arrive_time = (60 * 60 * endHours) + (60 * endMin) + endSec;
         }
     }
 }
