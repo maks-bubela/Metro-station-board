@@ -18,6 +18,6 @@ namespace Metro_station_board
         }
         public string GetDispatchPoint() { return this.dispatchPoint; }
         public string GetEndPoint() { return this.endPoint; }
-        public bool isTrainInWay() { return this.trainInTheWay; }
+        public bool isTransportInWay() { return this.trainInTheWay; }
     }
 }
