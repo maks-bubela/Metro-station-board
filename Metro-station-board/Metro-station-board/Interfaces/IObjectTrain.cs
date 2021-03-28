@@ -8,6 +8,6 @@ namespace Metro_station_board
     {
         public string GetDispatchPoint();
         public string GetEndPoint();
-        public bool isTrainInWay();
+        public bool isTransportInWay();
     }
 }
