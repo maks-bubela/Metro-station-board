@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31025.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Metro-station-board", "Metro-station-board\Metro-station-board.csproj", "{0BCDD26D-AB5E-4979-AEE6-B962B3B53894}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0BCDD26D-AB5E-4979-AEE6-B962B3B53894}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BCDD26D-AB5E-4979-AEE6-B962B3B53894}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BCDD26D-AB5E-4979-AEE6-B962B3B53894}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BCDD26D-AB5E-4979-AEE6-B962B3B53894}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3E0C68FE-15D1-4CD9-BCE1-48C93F19D975}
+	EndGlobalSection
+EndGlobal
