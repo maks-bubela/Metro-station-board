@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Metro_station_board
 {
-    class ObjectTrain : IObjectTrain
+    class ObjectTrain : IObjectTransport
     {
         private string dispatchPoint;
         private string endPoint;
