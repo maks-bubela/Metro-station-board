@@ -15,6 +15,7 @@ namespace Metro_station_board
         public Form1()
         {
             InitializeComponent();
+            violationsBox.Hide();
         }
 
     }
