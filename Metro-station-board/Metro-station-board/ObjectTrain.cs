@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Metro_station_board
 {
-    class ObjectTrain
+    class ObjectTrain : IObjectTrain
     {
         private string dispatchPoint;
         private string endPoint;
@@ -16,5 +16,8 @@ namespace Metro_station_board
             this.endPoint = endPoint;
             this.trainInTheWay = trainInTheWay;
         }
+        public string GetDispatchPoint() { return this.dispatchPoint; }
+        public string GetEndPoint() { return this.endPoint; }
+        public bool isTrainInWay() { return this.trainInTheWay; }
     }
 }
