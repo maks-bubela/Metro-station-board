@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Metro_station_board.Model
 {
-    class ViolationModel
+    public class ViolationModel
     {
         public long Id { get; set; }
         public TimeSpan violationTime { get; set; }
