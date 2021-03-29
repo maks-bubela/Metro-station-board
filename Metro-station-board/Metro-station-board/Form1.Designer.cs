@@ -35,13 +35,15 @@ namespace Metro_station_board
             this.dataOfScheduleLabel = new System.Windows.Forms.Label();
             this.getDataButton = new System.Windows.Forms.Button();
             this.violationsBox = new System.Windows.Forms.TextBox();
+            this.tableButton = new System.Windows.Forms.Button();
+            this.tableLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // contolPanelLabel
             // 
             this.contolPanelLabel.AutoSize = true;
             this.contolPanelLabel.Font = new System.Drawing.Font("Segoe UI", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.contolPanelLabel.Location = new System.Drawing.Point(247, 21);
+            this.contolPanelLabel.Location = new System.Drawing.Point(268, 18);
             this.contolPanelLabel.Name = "contolPanelLabel";
             this.contolPanelLabel.Size = new System.Drawing.Size(243, 50);
             this.contolPanelLabel.TabIndex = 0;
@@ -66,6 +68,7 @@ namespace Metro_station_board
             this.adButton.TabIndex = 2;
             this.adButton.Text = "Set up sourse";
             this.adButton.UseVisualStyleBackColor = true;
+            this.adButton.Click += new System.EventHandler(this.adButton_Click);
             // 
             // dataOfScheduleLabel
             // 
@@ -89,17 +92,39 @@ namespace Metro_station_board
             // 
             // violationsBox
             // 
-            this.violationsBox.Location = new System.Drawing.Point(247, 257);
+            this.violationsBox.Location = new System.Drawing.Point(272, 144);
             this.violationsBox.Multiline = true;
             this.violationsBox.Name = "violationsBox";
             this.violationsBox.Size = new System.Drawing.Size(243, 138);
             this.violationsBox.TabIndex = 5;
+            // 
+            // tableButton
+            // 
+            this.tableButton.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tableButton.Location = new System.Drawing.Point(300, 353);
+            this.tableButton.Name = "tableButton";
+            this.tableButton.Size = new System.Drawing.Size(170, 63);
+            this.tableButton.TabIndex = 7;
+            this.tableButton.Text = "Table Forms";
+            this.tableButton.UseVisualStyleBackColor = true;
+            // 
+            // tableLabel
+            // 
+            this.tableLabel.AutoSize = true;
+            this.tableLabel.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tableLabel.Location = new System.Drawing.Point(268, 312);
+            this.tableLabel.Name = "tableLabel";
+            this.tableLabel.Size = new System.Drawing.Size(247, 38);
+            this.tableLabel.TabIndex = 6;
+            this.tableLabel.Text = "Go to table forms :";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.tableButton);
+            this.Controls.Add(this.tableLabel);
             this.Controls.Add(this.violationsBox);
             this.Controls.Add(this.getDataButton);
             this.Controls.Add(this.dataOfScheduleLabel);
@@ -121,6 +146,8 @@ namespace Metro_station_board
         private System.Windows.Forms.Label dataOfScheduleLabel;
         private System.Windows.Forms.Button getDataButton;
         private System.Windows.Forms.TextBox violationsBox;
+        private System.Windows.Forms.Button tableButton;
+        private System.Windows.Forms.Label tableLabel;
     }
 }
 
