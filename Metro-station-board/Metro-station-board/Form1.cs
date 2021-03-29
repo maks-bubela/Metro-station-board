@@ -17,22 +17,7 @@ namespace Metro_station_board
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void adSourseLabel_Click(object sender, EventArgs e)
+        private void adButton_Click(object sender, EventArgs e)
         {
 
         }

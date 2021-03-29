@@ -48,7 +48,6 @@ namespace Metro_station_board
             this.contolPanelLabel.Size = new System.Drawing.Size(250, 44);
             this.contolPanelLabel.TabIndex = 0;
             this.contolPanelLabel.Text = "Control Panel";
-            this.contolPanelLabel.Click += new System.EventHandler(this.label1_Click);
             // 
             // dataOfScheduleLabel
             // 
@@ -59,7 +58,6 @@ namespace Metro_station_board
             this.dataOfScheduleLabel.Size = new System.Drawing.Size(386, 32);
             this.dataOfScheduleLabel.TabIndex = 1;
             this.dataOfScheduleLabel.Text = "Data on schedule violations : ";
-            this.dataOfScheduleLabel.Click += new System.EventHandler(this.label2_Click);
             // 
             // tableLabel
             // 
@@ -80,7 +78,6 @@ namespace Metro_station_board
             this.adSourseLabel.Size = new System.Drawing.Size(257, 32);
             this.adSourseLabel.TabIndex = 5;
             this.adSourseLabel.Text = "Set up ad sourse  : ";
-            this.adSourseLabel.Click += new System.EventHandler(this.adSourseLabel_Click);
             // 
             // adButton
             // 
@@ -91,6 +88,7 @@ namespace Metro_station_board
             this.adButton.TabIndex = 6;
             this.adButton.Text = "Set up sourse";
             this.adButton.UseVisualStyleBackColor = true;
+            this.adButton.Click += new System.EventHandler(this.adButton_Click);
             // 
             // dataButton
             // 
@@ -101,7 +99,6 @@ namespace Metro_station_board
             this.dataButton.TabIndex = 7;
             this.dataButton.Text = "Get Data";
             this.dataButton.UseVisualStyleBackColor = true;
-            this.dataButton.Click += new System.EventHandler(this.dataButton_Click);
             // 
             // tableButton
             // 
