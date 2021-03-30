@@ -1,7 +1,5 @@
 ﻿using Metro_station_board.Model;
-using System;
 using System.Data.Entity;
-using System.Linq;
 
 namespace Metro_station_board.Context
 {
