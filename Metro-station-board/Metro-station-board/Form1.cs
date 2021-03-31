@@ -74,6 +74,22 @@ namespace Metro_station_board
 
         private void deleteButton_Click(object sender, EventArgs e)
         {
+            int index = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            switch (table)
+            {
+                case "Ad":
+                    adRepository.deleteFromDB(index);
+                    dataGridView1.Refresh();
+                    break;
+                case "Violation":
+                    violationRepository.deleteFromDB(index);
+                    dataGridView1.Refresh();
+                    break;
+                case "Shedule":
+                    scheduleRepository.deleteFromDB(index);
+                    dataGridView1.Refresh();
+                    break;
+            }
 
         }
     }
