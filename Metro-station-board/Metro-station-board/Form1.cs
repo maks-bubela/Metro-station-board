@@ -14,5 +14,15 @@ namespace Metro_station_board
         {
 
         }
+
+        private void dataOfScheduleLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

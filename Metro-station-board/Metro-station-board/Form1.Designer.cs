@@ -30,13 +30,13 @@ namespace Metro_station_board
         private void InitializeComponent()
         {
             this.contolPanelLabel = new System.Windows.Forms.Label();
-            this.dataOfScheduleLabel = new System.Windows.Forms.Label();
-            this.tableLabel = new System.Windows.Forms.Label();
-            this.adSourseLabel = new System.Windows.Forms.Label();
-            this.adButton = new System.Windows.Forms.Button();
+            this.sourseButton = new System.Windows.Forms.Button();
             this.dataButton = new System.Windows.Forms.Button();
             this.tableButton = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.scheduleButton = new System.Windows.Forms.Button();
+            this.adButton = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // contolPanelLabel
@@ -49,90 +49,83 @@ namespace Metro_station_board
             this.contolPanelLabel.TabIndex = 0;
             this.contolPanelLabel.Text = "Control Panel";
             // 
-            // dataOfScheduleLabel
+            // sourseButton
             // 
-            this.dataOfScheduleLabel.AutoSize = true;
-            this.dataOfScheduleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dataOfScheduleLabel.Location = new System.Drawing.Point(411, 97);
-            this.dataOfScheduleLabel.Name = "dataOfScheduleLabel";
-            this.dataOfScheduleLabel.Size = new System.Drawing.Size(386, 32);
-            this.dataOfScheduleLabel.TabIndex = 1;
-            this.dataOfScheduleLabel.Text = "Data on schedule violations : ";
-            // 
-            // tableLabel
-            // 
-            this.tableLabel.AutoSize = true;
-            this.tableLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tableLabel.Location = new System.Drawing.Point(260, 297);
-            this.tableLabel.Name = "tableLabel";
-            this.tableLabel.Size = new System.Drawing.Size(246, 32);
-            this.tableLabel.TabIndex = 4;
-            this.tableLabel.Text = "Go to table forms :";
-            // 
-            // adSourseLabel
-            // 
-            this.adSourseLabel.AutoSize = true;
-            this.adSourseLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.adSourseLabel.Location = new System.Drawing.Point(24, 97);
-            this.adSourseLabel.Name = "adSourseLabel";
-            this.adSourseLabel.Size = new System.Drawing.Size(257, 32);
-            this.adSourseLabel.TabIndex = 5;
-            this.adSourseLabel.Text = "Set up ad sourse  : ";
-            // 
-            // adButton
-            // 
-            this.adButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.adButton.Location = new System.Drawing.Point(67, 132);
-            this.adButton.Name = "adButton";
-            this.adButton.Size = new System.Drawing.Size(159, 71);
-            this.adButton.TabIndex = 6;
-            this.adButton.Text = "Set up sourse";
-            this.adButton.UseVisualStyleBackColor = true;
-            this.adButton.Click += new System.EventHandler(this.adButton_Click);
+            this.sourseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.sourseButton.Location = new System.Drawing.Point(12, 68);
+            this.sourseButton.Name = "sourseButton";
+            this.sourseButton.Size = new System.Drawing.Size(151, 71);
+            this.sourseButton.TabIndex = 6;
+            this.sourseButton.Text = "Set up sourse";
+            this.sourseButton.UseVisualStyleBackColor = true;
+            this.sourseButton.Click += new System.EventHandler(this.adButton_Click);
             // 
             // dataButton
             // 
             this.dataButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dataButton.Location = new System.Drawing.Point(527, 132);
+            this.dataButton.Location = new System.Drawing.Point(169, 68);
             this.dataButton.Name = "dataButton";
-            this.dataButton.Size = new System.Drawing.Size(159, 71);
+            this.dataButton.Size = new System.Drawing.Size(151, 71);
             this.dataButton.TabIndex = 7;
-            this.dataButton.Text = "Get Data";
+            this.dataButton.Text = "Get violoations data";
             this.dataButton.UseVisualStyleBackColor = true;
             // 
             // tableButton
             // 
             this.tableButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tableButton.Location = new System.Drawing.Point(297, 332);
+            this.tableButton.Location = new System.Drawing.Point(640, 68);
             this.tableButton.Name = "tableButton";
-            this.tableButton.Size = new System.Drawing.Size(159, 71);
+            this.tableButton.Size = new System.Drawing.Size(151, 71);
             this.tableButton.TabIndex = 8;
-            this.tableButton.Text = "Get Table";
+            this.tableButton.Text = "Get Tables";
             this.tableButton.UseVisualStyleBackColor = true;
+            this.tableButton.Click += new System.EventHandler(this.tableButton_Click);
             // 
-            // textBox1
+            // scheduleButton
             // 
-            this.textBox1.Location = new System.Drawing.Point(232, 132);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(289, 150);
-            this.textBox1.TabIndex = 9;
+            this.scheduleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.scheduleButton.Location = new System.Drawing.Point(326, 68);
+            this.scheduleButton.Name = "scheduleButton";
+            this.scheduleButton.Size = new System.Drawing.Size(151, 71);
+            this.scheduleButton.TabIndex = 9;
+            this.scheduleButton.Text = "Get schedule data";
+            this.scheduleButton.UseVisualStyleBackColor = true;
+            // 
+            // adButton
+            // 
+            this.adButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.adButton.Location = new System.Drawing.Point(483, 68);
+            this.adButton.Name = "adButton";
+            this.adButton.Size = new System.Drawing.Size(151, 71);
+            this.adButton.TabIndex = 10;
+            this.adButton.Text = "Get ad data";
+            this.adButton.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 145);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(779, 293);
+            this.dataGridView1.TabIndex = 11;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.adButton);
+            this.Controls.Add(this.scheduleButton);
             this.Controls.Add(this.tableButton);
             this.Controls.Add(this.dataButton);
-            this.Controls.Add(this.adButton);
-            this.Controls.Add(this.adSourseLabel);
-            this.Controls.Add(this.tableLabel);
-            this.Controls.Add(this.dataOfScheduleLabel);
+            this.Controls.Add(this.sourseButton);
             this.Controls.Add(this.contolPanelLabel);
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -141,13 +134,12 @@ namespace Metro_station_board
         #endregion
 
         private System.Windows.Forms.Label contolPanelLabel;
-        private System.Windows.Forms.Label dataOfScheduleLabel;
-        private System.Windows.Forms.Label tableLabel;
-        private System.Windows.Forms.Label adSourseLabel;
-        private System.Windows.Forms.Button adButton;
+        private System.Windows.Forms.Button sourseButton;
         private System.Windows.Forms.Button dataButton;
         private System.Windows.Forms.Button tableButton;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button scheduleButton;
+        private System.Windows.Forms.Button adButton;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 
