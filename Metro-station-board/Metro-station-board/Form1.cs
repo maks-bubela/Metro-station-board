@@ -92,5 +92,33 @@ namespace Metro_station_board
             }
 
         }
+
+        private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            string data = dataGridView1.CurrentCell.Value.ToString();
+            string name = dataGridView1.Columns[dataGridView1.CurrentCell.ColumnIndex].Name;
+            switch (table)
+            {
+                case "Ad":
+                    adRepository.changeRecord(index, data);
+                    dataGridView1.Refresh();
+                    break;
+                case "Violation":
+                    if (dataGridView1.CurrentCell.ColumnIndex == 1 || dataGridView1.CurrentCell.ColumnIndex == 2)
+                        violationRepository.changeRecord(index, name, data);
+                    else if (dataGridView1.CurrentCell.ColumnIndex > 2)
+                        violationRepository.changeRecord(index, name, TimeSpan.Parse(data));
+                    dataGridView1.Refresh();
+                    break;
+                case "Shedule":
+                    if (dataGridView1.CurrentCell.ColumnIndex == 1 || dataGridView1.CurrentCell.ColumnIndex == 2)
+                        scheduleRepository.changeRecord(index, name, data);
+                    else if (dataGridView1.CurrentCell.ColumnIndex > 2)
+                        scheduleRepository.changeRecord(index, name, TimeSpan.Parse(data));
+                    dataGridView1.Refresh();
+                    break;
+            }
+        }
     }
 }
