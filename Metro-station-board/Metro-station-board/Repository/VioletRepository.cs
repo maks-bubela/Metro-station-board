@@ -25,13 +25,13 @@ namespace Metro_station_board.Repository
             violationContext.violationModels.Add(violationModel);
             violationContext.SaveChanges();
         }
-        public void deleteFromDB(TimeSpan arriveTime, string endPoint)
+        public void deleteFromDB(int id)
         {
             if (!this.isEmpty())
             {
                 violationContext.violationModels.Remove(violationContext.violationModels
-                    .Where(o => o.arrivedTime == arriveTime)
-                    .Where(o => o.endPoint == endPoint).FirstOrDefault());
+                    .Where(o => o.Id == id)
+                    .FirstOrDefault());
                 violationContext.SaveChanges();
             }
         }

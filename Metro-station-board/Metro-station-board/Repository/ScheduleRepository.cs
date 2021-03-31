@@ -25,13 +25,13 @@ namespace Metro_station_board.Repository
             scheduleContext.scheduleModels.Add(scheduleModel);
             scheduleContext.SaveChanges();
         }
-        public void deleteFromDB(TimeSpan arriveTime, string endPoint)
+        public void deleteFromDB(int id)
         {
             if (!this.isEmpty())
             {
                 scheduleContext.scheduleModels.Remove(scheduleContext.scheduleModels
-                    .Where(o => o.arriveTime == arriveTime)
-                    .Where(o => o.endPoint == endPoint).FirstOrDefault());
+                    .Where(o => o.Id == id)
+                    .FirstOrDefault());
                 scheduleContext.SaveChanges();
             }
         }

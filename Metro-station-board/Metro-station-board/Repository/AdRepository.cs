@@ -22,11 +22,11 @@ namespace Metro_station_board.Repository
                 adContext.SaveChanges();
             }
         }
-        public void deleteFromDB(string ad)
+        public void deleteFromDB(int id)
         {
             if (!this.isEmpty())
             {
-                adContext.adModels.Remove(adContext.adModels.Where(o => o.ad == ad).FirstOrDefault());
+                adContext.adModels.Remove(adContext.adModels.Where(o => o.Id == id).FirstOrDefault());
                 adContext.SaveChanges();
             }
         }
