@@ -22,6 +22,17 @@ namespace Metro_station_board.Repository
                 adContext.SaveChanges();
             }
         }
+
+        public void changeRecord(int id, string changeData)
+        {
+            AdModel adModel = adContext.adModels.Find(id);
+            if (adModel != null)
+            {
+                adModel.ad = changeData;
+                adContext.SaveChanges();
+            }
+        }
+
         public void deleteFromDB(int id)
         {
             if (!this.isEmpty())
