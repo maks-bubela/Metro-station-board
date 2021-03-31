@@ -25,6 +25,33 @@ namespace Metro_station_board.Repository
             scheduleContext.scheduleModels.Add(scheduleModel);
             scheduleContext.SaveChanges();
         }
+
+        public void changeRecord(int id, string columnName , string changeData)
+        {
+            ScheduleModel scheduleModel = scheduleContext.scheduleModels.Find(id);
+            if (scheduleModel != null)
+            {
+                if(columnName == "dispatchPoint")
+                    scheduleModel.dispatchPoint = changeData;
+                else if(columnName == "endPoint")
+                    scheduleModel.endPoint = changeData;
+                scheduleContext.SaveChanges();
+            }
+        }
+
+        public void changeRecord(int id, string columnName, TimeSpan timeSpan)
+        {
+            ViolationModel violationModel = scheduleContext.violationModels.Find(id);
+            if (violationModel != null)
+            {
+                if (columnName == "")
+                    violationModel.arrivedTime = timeSpan;
+                else if (columnName == " ")
+                    violationModel.dispatchTime = timeSpan;
+                scheduleContext.SaveChanges();
+            }
+        }
+
         public void deleteFromDB(int id)
         {
             if (!this.isEmpty())

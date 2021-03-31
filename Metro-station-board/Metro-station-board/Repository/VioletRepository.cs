@@ -8,10 +8,10 @@ namespace Metro_station_board.Repository
     class VioletRepository
     {
         private MetroStationBoardContext violationContext;
-        public VioletRepository(MetroStationBoardContext scheduleContext)
+        public VioletRepository(MetroStationBoardContext violationContext)
         {
-            if (scheduleContext != null)
-                this.violationContext = scheduleContext;
+            if (violationContext != null)
+                this.violationContext = violationContext;
         }
         public void addToDB(TimeSpan arriveTime, TimeSpan dispatchTime, string dispatchPoint, string endPoint)
         {
@@ -25,6 +25,33 @@ namespace Metro_station_board.Repository
             violationContext.violationModels.Add(violationModel);
             violationContext.SaveChanges();
         }
+
+        public void changeRecord(int id, string columnName, string changeData)
+        {
+            ViolationModel violationModel = violationContext.violationModels.Find(id);
+            if (violationModel != null)
+            {
+                if (columnName == "dispatchPoint")
+                    violationModel.dispatchPoint = changeData;
+                else if (columnName == "endPoint")
+                    violationModel.endPoint = changeData;
+                violationContext.SaveChanges();
+            }
+        }
+
+        public void changeRecord(int id, string columnName,TimeSpan timeSpan)
+        {
+            ViolationModel violationModel = violationContext.violationModels.Find(id);
+            if (violationModel != null)
+            {
+                if (columnName == "")
+                    violationModel.arrivedTime = timeSpan;
+                else if (columnName == " ")
+                    violationModel.dispatchTime = timeSpan;
+                violationContext.SaveChanges();
+            }
+        }
+
         public void deleteFromDB(int id)
         {
             if (!this.isEmpty())
