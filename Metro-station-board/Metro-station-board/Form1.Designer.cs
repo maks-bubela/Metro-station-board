@@ -64,9 +64,9 @@ namespace Metro_station_board
             // tableButton
             // 
             this.tableButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tableButton.Location = new System.Drawing.Point(210, 68);
+            this.tableButton.Location = new System.Drawing.Point(606, 66);
             this.tableButton.Name = "tableButton";
-            this.tableButton.Size = new System.Drawing.Size(192, 71);
+            this.tableButton.Size = new System.Drawing.Size(185, 71);
             this.tableButton.TabIndex = 8;
             this.tableButton.Text = "Get Tables";
             this.tableButton.UseVisualStyleBackColor = true;
@@ -75,7 +75,7 @@ namespace Metro_station_board
             // scheduleButton
             // 
             this.scheduleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.scheduleButton.Location = new System.Drawing.Point(408, 66);
+            this.scheduleButton.Location = new System.Drawing.Point(210, 66);
             this.scheduleButton.Name = "scheduleButton";
             this.scheduleButton.Size = new System.Drawing.Size(192, 71);
             this.scheduleButton.TabIndex = 9;
@@ -86,9 +86,9 @@ namespace Metro_station_board
             // adButton
             // 
             this.adButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.adButton.Location = new System.Drawing.Point(606, 66);
+            this.adButton.Location = new System.Drawing.Point(408, 66);
             this.adButton.Name = "adButton";
-            this.adButton.Size = new System.Drawing.Size(185, 71);
+            this.adButton.Size = new System.Drawing.Size(192, 71);
             this.adButton.TabIndex = 10;
             this.adButton.Text = "Get ad data";
             this.adButton.UseVisualStyleBackColor = true;
