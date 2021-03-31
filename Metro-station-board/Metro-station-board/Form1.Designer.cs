@@ -58,7 +58,7 @@ namespace Metro_station_board
             this.sourseButton.TabIndex = 6;
             this.sourseButton.Text = "Set up sourse";
             this.sourseButton.UseVisualStyleBackColor = true;
-            this.sourseButton.Click += new System.EventHandler(this.adButton_Click);
+            this.sourseButton.Click += new System.EventHandler(this.sourseButton_Click);
             // 
             // dataButton
             // 
@@ -69,6 +69,7 @@ namespace Metro_station_board
             this.dataButton.TabIndex = 7;
             this.dataButton.Text = "Get violoations data";
             this.dataButton.UseVisualStyleBackColor = true;
+            this.dataButton.Click += new System.EventHandler(this.dataButton_Click);
             // 
             // tableButton
             // 
@@ -90,6 +91,7 @@ namespace Metro_station_board
             this.scheduleButton.TabIndex = 9;
             this.scheduleButton.Text = "Get schedule data";
             this.scheduleButton.UseVisualStyleBackColor = true;
+            this.scheduleButton.Click += new System.EventHandler(this.scheduleButton_Click);
             // 
             // adButton
             // 
@@ -100,6 +102,7 @@ namespace Metro_station_board
             this.adButton.TabIndex = 10;
             this.adButton.Text = "Get ad data";
             this.adButton.UseVisualStyleBackColor = true;
+            this.adButton.Click += new System.EventHandler(this.adButton_Click);
             // 
             // dataGridView1
             // 
