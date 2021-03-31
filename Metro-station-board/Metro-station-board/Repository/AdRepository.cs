@@ -14,7 +14,7 @@ namespace Metro_station_board.Repository
         }
         public void addToDB(string ad)
         {
-            if (adContext.adModels.Count() > 10)
+            if (!(adContext.adModels.Count() > 10))
             {
                 AdModel adModel = new AdModel();
                 adModel.ad = ad;
