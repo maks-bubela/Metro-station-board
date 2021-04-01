@@ -20,6 +20,7 @@ namespace Metro_station_board.Objects
             scheduleRepository = new ScheduleRepository(context);
             violationRepository = new VioletRepository(context);
         }
+        //----- Add methods
         public void addAd()
         {
             adRepository.addToDB("");
@@ -34,6 +35,8 @@ namespace Metro_station_board.Objects
             TimeSpan nullTime = new TimeSpan(0, 0, 0);
             scheduleRepository.addToDB(nullTime, nullTime, "", "");
         }
+
+        //----- Delete methods
         public void deleteAd(int id)
         {
             adRepository.deleteFromDB(id);
@@ -47,12 +50,13 @@ namespace Metro_station_board.Objects
             scheduleRepository.deleteFromDB(id);
         }
 
-
+        //----- Change methods
         public void changeAd(int id, string data)
         {
             adRepository.changeRecord(id, data);
         }
 
+        //----- Violation methods
         public void changeViolation(int id,string name,string data)
         {
             violationRepository.changeRecord(id,name,data);
@@ -62,7 +66,7 @@ namespace Metro_station_board.Objects
             violationRepository.changeRecord(id,name,data);
         }
 
-
+        //----- Schedule methods
         public void changeSchedule(int id, string name, string data)
         {
             scheduleRepository.changeRecord(id,name,data);
