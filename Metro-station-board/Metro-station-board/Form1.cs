@@ -1,4 +1,5 @@
 ﻿using Metro_station_board.Context;
+using Metro_station_board.Objects;
 using Metro_station_board.Repository;
 using System;
 using System.Data.Entity;
@@ -10,17 +11,12 @@ namespace Metro_station_board
     {
         private MetroStationBoardContext context = new MetroStationBoardContext();
         private string table;
-        private AdRepository adRepository;
-        private ScheduleRepository scheduleRepository;
-        private VioletRepository violationRepository;
+        ControlPanelObject controlPanel;
         public Form1()
         {
             InitializeComponent();
-            adRepository = new AdRepository(context);
             context.adModels.Load();
-            scheduleRepository = new ScheduleRepository(context);
             context.scheduleModels.Load();
-            violationRepository = new VioletRepository(context);
             context.violationModels.Load();
         }
 
@@ -54,19 +50,18 @@ namespace Metro_station_board
 
         private void addButton_Click(object sender, EventArgs e)
         {
-            TimeSpan nullTime = new TimeSpan(0,0,0);
             switch (table)
             {
                 case "Ad":
-                    adRepository.addToDB("");
+                    controlPanel.addAd();
                     dataGridView1.Refresh();
                     break;
                 case "Violation":
-                    violationRepository.addToDB(nullTime, nullTime, "", "");
+                    controlPanel.addViolation();
                     dataGridView1.Refresh();
                     break;
                 case "Shedule":
-                    scheduleRepository.addToDB(nullTime, nullTime, "","");
+                    controlPanel.addSchedule();
                     dataGridView1.Refresh();
                     break;
             }
@@ -78,15 +73,15 @@ namespace Metro_station_board
             switch (table)
             {
                 case "Ad":
-                    adRepository.deleteFromDB(index);
+                    controlPanel.deleteAd(index);
                     dataGridView1.Refresh();
                     break;
                 case "Violation":
-                    violationRepository.deleteFromDB(index);
+                    controlPanel.deleteViolation(index);
                     dataGridView1.Refresh();
                     break;
                 case "Shedule":
-                    scheduleRepository.deleteFromDB(index);
+                    controlPanel.deleteSchedule(index);
                     dataGridView1.Refresh();
                     break;
             }
@@ -101,21 +96,21 @@ namespace Metro_station_board
             switch (table)
             {
                 case "Ad":
-                    adRepository.changeRecord(index, data);
+                    controlPanel.changeAd(index, data);
                     dataGridView1.Refresh();
                     break;
                 case "Violation":
                     if (dataGridView1.CurrentCell.ColumnIndex == 1 || dataGridView1.CurrentCell.ColumnIndex == 2)
-                        violationRepository.changeRecord(index, name, data);
+                        controlPanel.changeViolation(index, name, data);
                     else if (dataGridView1.CurrentCell.ColumnIndex > 2)
-                        violationRepository.changeRecord(index, name, TimeSpan.Parse(data));
+                        controlPanel.changeViolation(index, name, TimeSpan.Parse(data));
                     dataGridView1.Refresh();
                     break;
                 case "Shedule":
                     if (dataGridView1.CurrentCell.ColumnIndex == 1 || dataGridView1.CurrentCell.ColumnIndex == 2)
-                        scheduleRepository.changeRecord(index, name, data);
+                        controlPanel.changeSchedule(index, name, data);
                     else if (dataGridView1.CurrentCell.ColumnIndex > 2)
-                        scheduleRepository.changeRecord(index, name, TimeSpan.Parse(data));
+                        controlPanel.changeSchedule(index, name, TimeSpan.Parse(data));
                     dataGridView1.Refresh();
                     break;
             }
