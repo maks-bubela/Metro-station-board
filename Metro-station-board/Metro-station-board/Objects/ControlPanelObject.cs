@@ -34,5 +34,17 @@ namespace Metro_station_board.Objects
             TimeSpan nullTime = new TimeSpan(0, 0, 0);
             scheduleRepository.addToDB(nullTime, nullTime, "", "");
         }
+        public void deleteAd(int id)
+        {
+            adRepository.deleteFromDB(id);
+        }
+        public void deleteViolation(int id)
+        {
+            violationRepository.deleteFromDB(id);
+        }
+        public void deleteSchedule(int id)
+        {
+            scheduleRepository.deleteFromDB(id);
+        }
     }
 }
