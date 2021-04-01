@@ -46,5 +46,31 @@ namespace Metro_station_board.Objects
         {
             scheduleRepository.deleteFromDB(id);
         }
+
+
+        public void changeAd(int id, string data)
+        {
+            adRepository.changeRecord(id, data);
+        }
+
+        public void changeViolation(int id,string name,string data)
+        {
+            violationRepository.changeRecord(id,name,data);
+        }
+        public void changeViolation(int id, string name, TimeSpan data)
+        {
+            violationRepository.changeRecord(id,name,data);
+        }
+
+
+        public void changeSchedule(int id, string name, string data)
+        {
+            scheduleRepository.changeRecord(id,name,data);
+        }
+        public void changeSchedule(int id, string name, TimeSpan data)
+        {
+            scheduleRepository.changeRecord(id,name,data);
+        }
+
     }
 }
