@@ -56,7 +56,7 @@ namespace Metro_station_board.Objects
             adRepository.changeRecord(id, data);
         }
 
-        //----- Violation methods
+        //----- Violation change methods
         public void changeViolation(int id,string name,string data)
         {
             violationRepository.changeRecord(id,name,data);
@@ -66,7 +66,7 @@ namespace Metro_station_board.Objects
             violationRepository.changeRecord(id,name,data);
         }
 
-        //----- Schedule methods
+        //----- Schedule change methods
         public void changeSchedule(int id, string name, string data)
         {
             scheduleRepository.changeRecord(id,name,data);
