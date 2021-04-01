@@ -20,5 +20,19 @@ namespace Metro_station_board.Objects
             scheduleRepository = new ScheduleRepository(context);
             violationRepository = new VioletRepository(context);
         }
+        public void addAd()
+        {
+            adRepository.addToDB("");
+        }
+        public void addViolation()
+        {
+            TimeSpan nullTime = new TimeSpan(0, 0, 0);
+            violationRepository.addToDB(nullTime, nullTime, "", "");
+        }
+        public void addSchedule()
+        {
+            TimeSpan nullTime = new TimeSpan(0, 0, 0);
+            scheduleRepository.addToDB(nullTime, nullTime, "", "");
+        }
     }
 }
