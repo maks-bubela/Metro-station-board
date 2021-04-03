@@ -1,6 +1,5 @@
 ﻿using Metro_station_board.Context;
 using Metro_station_board.Objects;
-using Metro_station_board.Repository;
 using System;
 using System.Data.Entity;
 using System.Windows.Forms;
@@ -12,6 +11,7 @@ namespace Metro_station_board
         private MetroStationBoardContext context = new MetroStationBoardContext();
         private string table;
         ControlPanelObject controlPanel;
+        TimeSpan realTimeInWay;
         public MetroStationBoard()
         {
             InitializeComponent();
@@ -117,6 +117,42 @@ namespace Metro_station_board
             }
         }
 
-        
+        private void goTrainButton_Click(object sender, EventArgs e)
+        {
+            if (table == "Shedule" && !timer1.Enabled)
+            {
+                string dispatchPoint = (dataGridView1.CurrentRow.Cells[1].Value.ToString());
+                string arrivePoint = (dataGridView1.CurrentRow.Cells[2].Value.ToString());
+                TimeSpan dispatchTime = TimeSpan.Parse(dataGridView1.CurrentRow.Cells[3].Value.ToString());
+                TimeSpan arriveTime = TimeSpan.Parse(dataGridView1.CurrentRow.Cells[4].Value.ToString());
+
+                TrainSimulationObject simulationObject = new TrainSimulationObject();
+                simulationObject.StartTrain(dispatchPoint, arrivePoint, dispatchTime, arriveTime);
+
+                realTimeInWay = simulationObject.GetSensor().GetArriveTime() - simulationObject.GetSensor().GetDispatchTime();
+                dispatchLabel.Text = dispatchPoint;
+                arriveLabel.Text = arrivePoint;
+
+                timer1.Enabled = true;
+                timer1.Interval = 1000;
+                timer1.Tick += timerTick;
+                timer1.Start();
+                
+            }
+        }
+
+        public void timerTick(object sender, EventArgs e)
+        {
+            if (realTimeInWay.TotalSeconds > 0)
+            {
+                realTimeInWay -= new TimeSpan(0, 0, 1);
+                timerLabel.Text = realTimeInWay.ToString();
+            }
+            else
+            {
+                timer1.Tick -= timerTick;
+                timer1.Stop();
+            }
+        }
     }
 }

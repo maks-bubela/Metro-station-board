@@ -29,6 +29,7 @@ namespace Metro_station_board
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.contolPanelLabel = new System.Windows.Forms.Label();
             this.dataButton = new System.Windows.Forms.Button();
             this.tableButton = new System.Windows.Forms.Button();
@@ -38,6 +39,10 @@ namespace Metro_station_board
             this.addButton = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
             this.goTrainButton = new System.Windows.Forms.Button();
+            this.timerLabel = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.dispatchLabel = new System.Windows.Forms.Label();
+            this.arriveLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -139,11 +144,48 @@ namespace Metro_station_board
             this.goTrainButton.UseVisualStyleBackColor = true;
             this.goTrainButton.Click += new System.EventHandler(this.goTrainButton_Click);
             // 
+            // timerLabel
+            // 
+            this.timerLabel.AutoSize = true;
+            this.timerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.timerLabel.Location = new System.Drawing.Point(606, 373);
+            this.timerLabel.Name = "timerLabel";
+            this.timerLabel.Size = new System.Drawing.Size(64, 25);
+            this.timerLabel.TabIndex = 15;
+            this.timerLabel.Text = "label1";
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            // 
+            // dispatchLabel
+            // 
+            this.dispatchLabel.AutoSize = true;
+            this.dispatchLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dispatchLabel.Location = new System.Drawing.Point(606, 411);
+            this.dispatchLabel.Name = "dispatchLabel";
+            this.dispatchLabel.Size = new System.Drawing.Size(53, 20);
+            this.dispatchLabel.TabIndex = 16;
+            this.dispatchLabel.Text = "label2";
+            // 
+            // arriveLabel
+            // 
+            this.arriveLabel.AutoSize = true;
+            this.arriveLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.arriveLabel.Location = new System.Drawing.Point(710, 411);
+            this.arriveLabel.Name = "arriveLabel";
+            this.arriveLabel.Size = new System.Drawing.Size(53, 20);
+            this.arriveLabel.TabIndex = 17;
+            this.arriveLabel.Text = "label3";
+            // 
             // MetroStationBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.arriveLabel);
+            this.Controls.Add(this.dispatchLabel);
+            this.Controls.Add(this.timerLabel);
             this.Controls.Add(this.goTrainButton);
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.addButton);
@@ -172,6 +214,10 @@ namespace Metro_station_board
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Button deleteButton;
         private System.Windows.Forms.Button goTrainButton;
+        private System.Windows.Forms.Label timerLabel;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label dispatchLabel;
+        private System.Windows.Forms.Label arriveLabel;
     }
 }
 
