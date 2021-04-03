@@ -4,29 +4,20 @@ namespace Metro_station_board
 {
     class ObjectSensor
     {
-
-        private IObjectTransport transport;
-        private long timer;
-
-        // The time of needed arrival
-        private int arrive_time;
-
-        public IObjectTransport GetTransport() { return transport; }
-        public int GetArriveTime() { return arrive_time; }
-
-        public ObjectSensor(int endHours,int endMin,int endSec, IObjectTransport transport)
+        private TimeSpan arrive_time;
+        private TimeSpan dispatch_time;
+        public TimeSpan GetArriveTime() { return arrive_time; }
+        public TimeSpan GetDispatchTime() { return dispatch_time; }
+        public ObjectSensor()
         {
-            this.transport = transport;
-            this.arrive_time = (60 * 60 * endHours) + (60 * endMin) + endSec;
         }
-
-        public void startRide()
+        public void startRide(TimeSpan dispatch_time)
         {
-            this.timer = DateTime.Now.Ticks;
+            this.dispatch_time = dispatch_time;
         }
-        public long finishRide()
+        public void finishRide(TimeSpan arrive_time)
         {
-            return (DateTime.Now.Ticks - timer);
+            this.arrive_time = arrive_time;
         }
     }
 }
