@@ -7,17 +7,18 @@ using System.Windows.Forms;
 
 namespace Metro_station_board
 {
-    public partial class Form1 : Form
+    public partial class MetroStationBoard : Form
     {
         private MetroStationBoardContext context = new MetroStationBoardContext();
         private string table;
         ControlPanelObject controlPanel;
-        public Form1()
+        public MetroStationBoard()
         {
             InitializeComponent();
             context.adModels.Load();
             context.scheduleModels.Load();
             context.violationModels.Load();
+            controlPanel = new ControlPanelObject(context);
         }
 
         private void tableButton_Click(object sender, EventArgs e)
@@ -115,5 +116,7 @@ namespace Metro_station_board
                     break;
             }
         }
+
+        
     }
 }

@@ -1,7 +1,7 @@
 ﻿
 namespace Metro_station_board
 {
-    partial class Form1
+    partial class MetroStationBoard
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -37,6 +37,7 @@ namespace Metro_station_board
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.addButton = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
+            this.goTrainButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -127,11 +128,23 @@ namespace Metro_station_board
             this.deleteButton.UseVisualStyleBackColor = true;
             this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
-            // Form1
+            // goTrainButton
+            // 
+            this.goTrainButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.goTrainButton.Location = new System.Drawing.Point(606, 299);
+            this.goTrainButton.Name = "goTrainButton";
+            this.goTrainButton.Size = new System.Drawing.Size(185, 71);
+            this.goTrainButton.TabIndex = 14;
+            this.goTrainButton.Text = "Go a train";
+            this.goTrainButton.UseVisualStyleBackColor = true;
+            this.goTrainButton.Click += new System.EventHandler(this.goTrainButton_Click);
+            // 
+            // MetroStationBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.goTrainButton);
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.dataGridView1);
@@ -140,7 +153,7 @@ namespace Metro_station_board
             this.Controls.Add(this.tableButton);
             this.Controls.Add(this.dataButton);
             this.Controls.Add(this.contolPanelLabel);
-            this.Name = "Form1";
+            this.Name = "MetroStationBoard";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -158,6 +171,7 @@ namespace Metro_station_board
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Button deleteButton;
+        private System.Windows.Forms.Button goTrainButton;
     }
 }
 

@@ -72,6 +72,7 @@
     <Compile Include="Objects\ControlPanelObject.cs" />
     <Compile Include="Objects\ObjectSensor.cs" />
     <Compile Include="Objects\ObjectTrain.cs" />
+    <Compile Include="Objects\TrainSimulationObject.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\AdRepository.cs" />
