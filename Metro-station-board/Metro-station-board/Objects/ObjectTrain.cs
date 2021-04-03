@@ -7,12 +7,12 @@ namespace Metro_station_board
         private string endPoint;
         private bool trainInTheWay;
 
-        public ObjectTrain(string dispatchPoint, string endPoint, bool trainInTheWay)
+        public ObjectTrain(string dispatchPoint, string endPoint)
         {
             this.dispatchPoint = dispatchPoint;
             this.endPoint = endPoint;
-            this.trainInTheWay = trainInTheWay;
         }
+        public void trainInWay(bool inWay) { this.trainInTheWay = inWay; }
         public string GetDispatchPoint() { return this.dispatchPoint; }
         public string GetEndPoint() { return this.endPoint; }
         public bool isTransportInWay() { return this.trainInTheWay; }
