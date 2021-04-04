@@ -6,6 +6,7 @@ namespace Metro_station_board.Repository
 {
     class AdRepository
     {
+        private const int MAX_AD_RECORD = 10;
         private MetroStationBoardContext adContext;
         public AdRepository(MetroStationBoardContext adContext)
         {
@@ -14,7 +15,7 @@ namespace Metro_station_board.Repository
         }
         public void addToDB(string ad)
         {
-            if (!(adContext.adModels.Count() > 10))
+            if (!(adContext.adModels.Count() > MAX_AD_RECORD))
             {
                 AdModel adModel = new AdModel();
                 adModel.ad = ad;
