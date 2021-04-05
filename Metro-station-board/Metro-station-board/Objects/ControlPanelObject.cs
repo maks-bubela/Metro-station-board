@@ -21,19 +21,17 @@ namespace Metro_station_board.Objects
             violationRepository = new VioletRepository(context);
         }
         //----- Add methods
-        public void addAd()
+        public void addAd(string ad)
         {
-            adRepository.addToDB("");
+            adRepository.addToDB(ad);
         }
-        public void addViolation()
+        public void addViolation(TimeSpan arriveTime, TimeSpan dispatchTime, string dispatchPoint, string endPoint)
         {
-            TimeSpan nullTime = new TimeSpan(0, 0, 0);
-            violationRepository.addToDB(nullTime, nullTime, "", "");
+            violationRepository.addToDB(arriveTime, dispatchTime, dispatchPoint, endPoint);
         }
-        public void addSchedule()
+        public void addSchedule(TimeSpan arriveTime, TimeSpan dispatchTime, string dispatchPoint, string endPoint)
         {
-            TimeSpan nullTime = new TimeSpan(0, 0, 0);
-            scheduleRepository.addToDB(nullTime, nullTime, "", "");
+            scheduleRepository.addToDB(arriveTime, dispatchTime, dispatchPoint, endPoint);
         }
 
         //----- Delete methods
@@ -54,16 +52,6 @@ namespace Metro_station_board.Objects
         public void changeAd(int id, string data)
         {
             adRepository.changeRecord(id, data);
-        }
-
-        //----- Violation change methods
-        public void changeViolation(int id,string name,string data)
-        {
-            violationRepository.changeRecord(id,name,data);
-        }
-        public void changeViolation(int id, string name, TimeSpan data)
-        {
-            violationRepository.changeRecord(id,name,data);
         }
 
         //----- Schedule change methods
