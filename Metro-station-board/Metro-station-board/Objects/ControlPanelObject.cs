@@ -1,4 +1,5 @@
 ﻿using Metro_station_board.Context;
+using Metro_station_board.Model;
 using Metro_station_board.Repository;
 using System;
 using System.Collections.Generic;
@@ -13,9 +14,11 @@ namespace Metro_station_board.Objects
         private AdRepository adRepository;
         private ScheduleRepository scheduleRepository;
         private VioletRepository violationRepository;
+        private MetroStationBoardContext context;
 
-        public ControlPanelObject(MetroStationBoardContext context)
+        public ControlPanelObject()
         {
+            context = new MetroStationBoardContext();
             adRepository = new AdRepository(context);
             scheduleRepository = new ScheduleRepository(context);
             violationRepository = new VioletRepository(context);
@@ -64,5 +67,9 @@ namespace Metro_station_board.Objects
             scheduleRepository.changeRecord(id,name,data);
         }
 
+        //----- get data methods
+        public AdModel getAd(int id) { return context.adModels.FirstOrDefault(u => u.Id == id); }
+        public ScheduleModel getSchedule(int id) { return context.scheduleModels.FirstOrDefault(u => u.Id == id); }
+        public ViolationModel getViolation(int id) { return context.violationModels.FirstOrDefault(u => u.Id == id); }
     }
 }
