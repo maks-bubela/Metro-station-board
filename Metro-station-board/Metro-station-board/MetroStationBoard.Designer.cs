@@ -35,7 +35,9 @@ namespace Metro_station_board
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.adLabel = new System.Windows.Forms.Label();
             this.addonsMenu = new System.Windows.Forms.MenuStrip();
+            this.ForecastToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.addonsMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // contolPanelLabel
@@ -76,11 +78,20 @@ namespace Metro_station_board
             // addonsMenu
             // 
             this.addonsMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.addonsMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ForecastToolStripMenuItem});
             this.addonsMenu.Location = new System.Drawing.Point(0, 0);
             this.addonsMenu.Name = "addonsMenu";
-            this.addonsMenu.Size = new System.Drawing.Size(800, 30);
+            this.addonsMenu.Size = new System.Drawing.Size(800, 28);
             this.addonsMenu.TabIndex = 13;
             this.addonsMenu.Text = "menuStrip1";
+            // 
+            // ForecastToolStripMenuItem
+            // 
+            this.ForecastToolStripMenuItem.Name = "ForecastToolStripMenuItem";
+            this.ForecastToolStripMenuItem.Size = new System.Drawing.Size(78, 24);
+            this.ForecastToolStripMenuItem.Text = "Forecast";
+            this.ForecastToolStripMenuItem.Click += new System.EventHandler(this.ForecastToolStripMenuItem_Click);
             // 
             // MetroStationBoard
             // 
@@ -95,6 +106,8 @@ namespace Metro_station_board
             this.Name = "MetroStationBoard";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.addonsMenu.ResumeLayout(false);
+            this.addonsMenu.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -107,6 +120,7 @@ namespace Metro_station_board
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label adLabel;
         private System.Windows.Forms.MenuStrip addonsMenu;
+        private System.Windows.Forms.ToolStripMenuItem ForecastToolStripMenuItem;
     }
 }
 
