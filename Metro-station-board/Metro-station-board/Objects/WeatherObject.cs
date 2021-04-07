@@ -13,6 +13,12 @@ namespace Metro_station_board.Objects
         private int airHumidity;
         private int wind;
 
+        public int GetTemp() { return temperature; }
+        public int GetPrecipitation() { return precipitation; }
+        public int GetAirHumidity() { return airHumidity; }
+        public int GetWind() { return wind; }
+
+
         public WeatherObject(int temperature, int precipitation, int airHumidity, int wind)
         {
             this.temperature = temperature;
