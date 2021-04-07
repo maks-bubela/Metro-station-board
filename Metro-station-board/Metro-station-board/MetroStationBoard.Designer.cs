@@ -36,8 +36,12 @@ namespace Metro_station_board
             this.adLabel = new System.Windows.Forms.Label();
             this.addonsMenu = new System.Windows.Forms.MenuStrip();
             this.ForecastToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.AddAd = new System.Windows.Forms.Button();
+            this.EditAd = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.addonsMenu.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // contolPanelLabel
@@ -63,17 +67,18 @@ namespace Metro_station_board
             // 
             // timer1
             // 
-            this.timer1.Interval = 1000;
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 150;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // adLabel
             // 
             this.adLabel.AutoSize = true;
             this.adLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.adLabel.Location = new System.Drawing.Point(12, 416);
+            this.adLabel.Location = new System.Drawing.Point(739, 19);
             this.adLabel.Name = "adLabel";
-            this.adLabel.Size = new System.Drawing.Size(34, 25);
+            this.adLabel.Size = new System.Drawing.Size(0, 25);
             this.adLabel.TabIndex = 12;
-            this.adLabel.Text = "ad";
             // 
             // addonsMenu
             // 
@@ -93,21 +98,53 @@ namespace Metro_station_board
             this.ForecastToolStripMenuItem.Text = "Forecast";
             this.ForecastToolStripMenuItem.Click += new System.EventHandler(this.ForecastToolStripMenuItem_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel1.Controls.Add(this.adLabel);
+            this.panel1.Location = new System.Drawing.Point(12, 430);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(776, 63);
+            this.panel1.TabIndex = 14;
+            // 
+            // AddAd
+            // 
+            this.AddAd.Location = new System.Drawing.Point(13, 500);
+            this.AddAd.Name = "AddAd";
+            this.AddAd.Size = new System.Drawing.Size(75, 23);
+            this.AddAd.TabIndex = 15;
+            this.AddAd.Text = "Add ad";
+            this.AddAd.UseVisualStyleBackColor = true;
+            this.AddAd.Click += new System.EventHandler(this.AddAd_Click);
+            // 
+            // EditAd
+            // 
+            this.EditAd.Location = new System.Drawing.Point(95, 500);
+            this.EditAd.Name = "EditAd";
+            this.EditAd.Size = new System.Drawing.Size(75, 23);
+            this.EditAd.TabIndex = 16;
+            this.EditAd.Text = "Edit ad";
+            this.EditAd.UseVisualStyleBackColor = true;
+            this.EditAd.Click += new System.EventHandler(this.EditAd_Click);
+            // 
             // MetroStationBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.adLabel);
+            this.ClientSize = new System.Drawing.Size(800, 538);
+            this.Controls.Add(this.EditAd);
+            this.Controls.Add(this.AddAd);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.contolPanelLabel);
             this.Controls.Add(this.addonsMenu);
             this.MainMenuStrip = this.addonsMenu;
             this.Name = "MetroStationBoard";
-            this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.addonsMenu.ResumeLayout(false);
             this.addonsMenu.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -121,6 +158,9 @@ namespace Metro_station_board
         private System.Windows.Forms.Label adLabel;
         private System.Windows.Forms.MenuStrip addonsMenu;
         private System.Windows.Forms.ToolStripMenuItem ForecastToolStripMenuItem;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button AddAd;
+        private System.Windows.Forms.Button EditAd;
     }
 }
 

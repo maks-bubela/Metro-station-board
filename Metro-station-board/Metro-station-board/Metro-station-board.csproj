@@ -58,7 +58,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddAdWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddAdWindow.Designer.cs">
+      <DependentUpon>AddAdWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeAd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeAd.Designer.cs">
+      <DependentUpon>ChangeAd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Context\MetroStationBoardContext.cs" />
+    <Compile Include="EditAd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditAd.Designer.cs">
+      <DependentUpon>EditAd.cs</DependentUpon>
+    </Compile>
     <Compile Include="MetroStationBoard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +98,15 @@
     <Compile Include="Repository\AdRepository.cs" />
     <Compile Include="Repository\ScheduleRepository.cs" />
     <Compile Include="Repository\VioletRepository.cs" />
+    <EmbeddedResource Include="AddAdWindow.resx">
+      <DependentUpon>AddAdWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeAd.resx">
+      <DependentUpon>ChangeAd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditAd.resx">
+      <DependentUpon>EditAd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MetroStationBoard.resx">
       <DependentUpon>MetroStationBoard.cs</DependentUpon>
     </EmbeddedResource>
