@@ -70,6 +70,7 @@
     <Compile Include="Model\ScheduleModel.cs" />
     <Compile Include="Model\ViolationModel.cs" />
     <Compile Include="Objects\ControlPanelObject.cs" />
+    <Compile Include="Objects\ForecastObject.cs" />
     <Compile Include="Objects\ObjectSensor.cs" />
     <Compile Include="Objects\ObjectTrain.cs" />
     <Compile Include="Objects\TrainSimulationObject.cs" />
