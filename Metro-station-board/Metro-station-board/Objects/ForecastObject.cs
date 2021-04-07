@@ -10,11 +10,11 @@ namespace Metro_station_board.Objects
     {
         WeatherObject weather;
 
-        public WeatherObject getForecast()
+        public ForecastObject()
         {
             Random random = new Random();
-            weather = new WeatherObject(random.Next(-20,40), random.Next(0,100), random.Next(0, 100), random.Next(0, 40));
-            return weather;
+            weather = new WeatherObject(random.Next(-20, 40), random.Next(0, 100), random.Next(0, 100), random.Next(0, 40));
         }
+        public WeatherObject getForecast(){ return weather;}
     }
 }
