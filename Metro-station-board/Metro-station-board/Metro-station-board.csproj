@@ -73,6 +73,7 @@
     <Compile Include="Objects\ObjectSensor.cs" />
     <Compile Include="Objects\ObjectTrain.cs" />
     <Compile Include="Objects\TrainSimulationObject.cs" />
+    <Compile Include="Objects\WeatherObject.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\AdRepository.cs" />

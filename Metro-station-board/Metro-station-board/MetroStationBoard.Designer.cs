@@ -34,7 +34,7 @@ namespace Metro_station_board
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.adLabel = new System.Windows.Forms.Label();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.addonsMenu = new System.Windows.Forms.MenuStrip();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,14 +73,14 @@ namespace Metro_station_board
             this.adLabel.TabIndex = 12;
             this.adLabel.Text = "ad";
             // 
-            // menuStrip1
+            // addonsMenu
             // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
-            this.menuStrip1.TabIndex = 13;
-            this.menuStrip1.Text = "menuStrip1";
+            this.addonsMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.addonsMenu.Location = new System.Drawing.Point(0, 0);
+            this.addonsMenu.Name = "addonsMenu";
+            this.addonsMenu.Size = new System.Drawing.Size(800, 30);
+            this.addonsMenu.TabIndex = 13;
+            this.addonsMenu.Text = "menuStrip1";
             // 
             // MetroStationBoard
             // 
@@ -90,8 +90,8 @@ namespace Metro_station_board
             this.Controls.Add(this.adLabel);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.contolPanelLabel);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
+            this.Controls.Add(this.addonsMenu);
+            this.MainMenuStrip = this.addonsMenu;
             this.Name = "MetroStationBoard";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -106,7 +106,7 @@ namespace Metro_station_board
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label adLabel;
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.MenuStrip addonsMenu;
     }
 }
 
