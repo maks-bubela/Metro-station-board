@@ -90,13 +90,13 @@ namespace Metro_station_board
             this.addonsMenu.Size = new System.Drawing.Size(800, 28);
             this.addonsMenu.TabIndex = 13;
             this.addonsMenu.Text = "menuStrip1";
+            this.addonsMenu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.addonsMenu_ItemClicked);
             // 
             // ForecastToolStripMenuItem
             // 
             this.ForecastToolStripMenuItem.Name = "ForecastToolStripMenuItem";
             this.ForecastToolStripMenuItem.Size = new System.Drawing.Size(78, 24);
             this.ForecastToolStripMenuItem.Text = "Forecast";
-            this.ForecastToolStripMenuItem.Click += new System.EventHandler(this.ForecastToolStripMenuItem_Click);
             // 
             // panel1
             // 
