@@ -33,8 +33,6 @@ namespace Metro_station_board
         }
         private void AddAd_Click(object sender, EventArgs e)
         {
-            AddAdWindow addAdWindow = new AddAdWindow();
-            addAdWindow.ShowDialog();
             CreateAdList();
         }
 

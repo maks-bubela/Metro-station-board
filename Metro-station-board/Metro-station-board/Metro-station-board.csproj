@@ -58,12 +58,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddAdWindow.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddAdWindow.Designer.cs">
-      <DependentUpon>AddAdWindow.cs</DependentUpon>
-    </Compile>
     <Compile Include="ChangeAd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,9 +93,6 @@
     <Compile Include="Repository\AdRepository.cs" />
     <Compile Include="Repository\ScheduleRepository.cs" />
     <Compile Include="Repository\VioletRepository.cs" />
-    <EmbeddedResource Include="AddAdWindow.resx">
-      <DependentUpon>AddAdWindow.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ChangeAd.resx">
       <DependentUpon>ChangeAd.cs</DependentUpon>
     </EmbeddedResource>

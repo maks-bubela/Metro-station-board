@@ -16,7 +16,6 @@ namespace Metro_station_board
     {
         private MetroStationBoardContext adContext = new MetroStationBoardContext();
         private AdRepository adRepository = new AdRepository(new MetroStationBoardContext());
-
         public EditAd()
         {
             InitializeComponent();
@@ -59,6 +58,12 @@ namespace Metro_station_board
                     adRepository.deleteFromDB(Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString()));
                 }
             }
+            UpdateTable();
+        }
+
+        private void AddButton_Click(object sender, EventArgs e)
+        {
+            adRepository.addToDB(AddAdText.Text);
             UpdateTable();
         }
     }

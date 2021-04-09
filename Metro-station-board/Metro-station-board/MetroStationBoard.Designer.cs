@@ -37,7 +37,6 @@ namespace Metro_station_board
             this.addonsMenu = new System.Windows.Forms.MenuStrip();
             this.ForecastToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.AddAd = new System.Windows.Forms.Button();
             this.EditAd = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.addonsMenu.SuspendLayout();
@@ -107,19 +106,9 @@ namespace Metro_station_board
             this.panel1.Size = new System.Drawing.Size(776, 63);
             this.panel1.TabIndex = 14;
             // 
-            // AddAd
-            // 
-            this.AddAd.Location = new System.Drawing.Point(13, 500);
-            this.AddAd.Name = "AddAd";
-            this.AddAd.Size = new System.Drawing.Size(75, 23);
-            this.AddAd.TabIndex = 15;
-            this.AddAd.Text = "Add ad";
-            this.AddAd.UseVisualStyleBackColor = true;
-            this.AddAd.Click += new System.EventHandler(this.AddAd_Click);
-            // 
             // EditAd
             // 
-            this.EditAd.Location = new System.Drawing.Point(95, 500);
+            this.EditAd.Location = new System.Drawing.Point(12, 499);
             this.EditAd.Name = "EditAd";
             this.EditAd.Size = new System.Drawing.Size(75, 23);
             this.EditAd.TabIndex = 16;
@@ -133,7 +122,6 @@ namespace Metro_station_board
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 538);
             this.Controls.Add(this.EditAd);
-            this.Controls.Add(this.AddAd);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.contolPanelLabel);
@@ -159,7 +147,6 @@ namespace Metro_station_board
         private System.Windows.Forms.MenuStrip addonsMenu;
         private System.Windows.Forms.ToolStripMenuItem ForecastToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button AddAd;
         private System.Windows.Forms.Button EditAd;
     }
 }
