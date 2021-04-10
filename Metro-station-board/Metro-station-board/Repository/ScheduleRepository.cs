@@ -1,11 +1,12 @@
 ﻿using Metro_station_board.Context;
+using Metro_station_board.Interfaces;
 using Metro_station_board.Model;
 using System;
 using System.Linq;
 
 namespace Metro_station_board.Repository
 {
-    class ScheduleRepository
+    class ScheduleRepository : IScheduleRepository
     {
         private MetroStationBoardContext scheduleContext;
         public ScheduleRepository(MetroStationBoardContext scheduleContext)

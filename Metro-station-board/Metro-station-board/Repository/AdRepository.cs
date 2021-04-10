@@ -1,10 +1,11 @@
 ﻿using Metro_station_board.Context;
+using Metro_station_board.Interfaces;
 using Metro_station_board.Model;
 using System.Linq;
 
 namespace Metro_station_board.Repository
 {
-    class AdRepository
+    class AdRepository : IAdRepository
     {
         private const int MAX_AD_RECORD = 10;
         private MetroStationBoardContext adContext;
