@@ -20,9 +20,6 @@ namespace Metro_station_board
         public MetroStationBoard()
         {
             InitializeComponent();
-            context.adModels.Load();
-            context.scheduleModels.Load();
-            context.violationModels.Load();
             CreateAdList();
             GenerateContent();
         }
