@@ -1,9 +1,11 @@
 ﻿using Metro_station_board.Context;
 using Metro_station_board.Interfaces;
+using Metro_station_board.Model;
 using Metro_station_board.Objects;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
@@ -22,6 +24,7 @@ namespace Metro_station_board
             InitializeComponent();
             CreateAdList();
             GenerateContent();
+            dataGridView1.DataSource = FillData();
         }
 
         private void CreateAdList()
@@ -76,5 +79,21 @@ namespace Metro_station_board
         {
             addons.getUI(this, addonsMenu);
         }
+
+        private DataTable FillData()
+        {
+            DataTable dt = new DataTable();
+            dt.Columns.Add("dispatchPoint");
+            dt.Columns.Add("endPoint");
+            dt.Columns.Add("dispatchTime");
+            dt.Columns.Add("arriveTime");
+            var data = context.scheduleModels.ToList();
+            foreach (var oItem in data)
+            {               
+                dt.Rows.Add(new object[] { oItem.dispatchPoint, oItem.endPoint, oItem.dispatchTime, oItem.arriveTime });
+            }       
+            return dt;
+        }
+        
     }
 }
