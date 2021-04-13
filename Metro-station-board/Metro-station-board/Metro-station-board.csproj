@@ -147,6 +147,12 @@
     <Compile Include="Repository\AdRepository.cs" />
     <Compile Include="Repository\ScheduleRepository.cs" />
     <Compile Include="Repository\VioletRepository.cs" />
+    <Compile Include="Train Simulator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Train Simulator.Designer.cs">
+      <DependentUpon>Train Simulator.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ChangeAd.resx">
       <DependentUpon>ChangeAd.cs</DependentUpon>
     </EmbeddedResource>
@@ -165,6 +171,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Train Simulator.resx">
+      <DependentUpon>Train Simulator.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -73,6 +73,11 @@ namespace Metro_station_board
         {
             if (e.ClickedItem.Text == "Forecast")
                 guiUpdate(new ForecastObject());
+            else if (e.ClickedItem.Text == "Train Simulator")
+            {
+                Train_Simulator train_Simulator = new Train_Simulator();
+                train_Simulator.ShowDialog();
+            }
         }
 
         private void guiUpdate(IAddons addons)

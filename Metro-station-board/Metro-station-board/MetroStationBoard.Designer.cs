@@ -38,6 +38,7 @@ namespace Metro_station_board
             this.ForecastToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.EditAd = new System.Windows.Forms.Button();
+            this.trainSimulatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.addonsMenu.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -48,22 +49,21 @@ namespace Metro_station_board
             this.contolPanelLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.contolPanelLabel.AutoSize = true;
             this.contolPanelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.contolPanelLabel.Location = new System.Drawing.Point(203, 20);
-            this.contolPanelLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.contolPanelLabel.Location = new System.Drawing.Point(271, 25);
             this.contolPanelLabel.Name = "contolPanelLabel";
-            this.contolPanelLabel.Size = new System.Drawing.Size(173, 36);
+            this.contolPanelLabel.Size = new System.Drawing.Size(223, 44);
             this.contolPanelLabel.TabIndex = 0;
             this.contolPanelLabel.Text = "Metro Table";
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(9, 64);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 79);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(554, 271);
+            this.dataGridView1.Size = new System.Drawing.Size(739, 334);
             this.dataGridView1.TabIndex = 11;
             // 
             // timer1
@@ -76,21 +76,21 @@ namespace Metro_station_board
             // 
             this.adLabel.AutoSize = true;
             this.adLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.adLabel.Location = new System.Drawing.Point(554, 15);
-            this.adLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.adLabel.Location = new System.Drawing.Point(739, 18);
             this.adLabel.Name = "adLabel";
-            this.adLabel.Size = new System.Drawing.Size(0, 20);
+            this.adLabel.Size = new System.Drawing.Size(0, 25);
             this.adLabel.TabIndex = 12;
             // 
             // addonsMenu
             // 
             this.addonsMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.addonsMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ForecastToolStripMenuItem});
+            this.ForecastToolStripMenuItem,
+            this.trainSimulatorToolStripMenuItem});
             this.addonsMenu.Location = new System.Drawing.Point(0, 0);
             this.addonsMenu.Name = "addonsMenu";
-            this.addonsMenu.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.addonsMenu.Size = new System.Drawing.Size(578, 24);
+            this.addonsMenu.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.addonsMenu.Size = new System.Drawing.Size(771, 28);
             this.addonsMenu.TabIndex = 13;
             this.addonsMenu.Text = "menuStrip1";
             this.addonsMenu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.addonsMenu_ItemClicked);
@@ -98,42 +98,48 @@ namespace Metro_station_board
             // ForecastToolStripMenuItem
             // 
             this.ForecastToolStripMenuItem.Name = "ForecastToolStripMenuItem";
-            this.ForecastToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
+            this.ForecastToolStripMenuItem.Size = new System.Drawing.Size(78, 24);
             this.ForecastToolStripMenuItem.Text = "Forecast";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panel1.Controls.Add(this.adLabel);
-            this.panel1.Location = new System.Drawing.Point(9, 349);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Location = new System.Drawing.Point(12, 430);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(554, 51);
+            this.panel1.Size = new System.Drawing.Size(739, 63);
             this.panel1.TabIndex = 14;
             // 
             // EditAd
             // 
-            this.EditAd.Location = new System.Drawing.Point(9, 405);
-            this.EditAd.Margin = new System.Windows.Forms.Padding(2);
+            this.EditAd.Location = new System.Drawing.Point(12, 498);
+            this.EditAd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.EditAd.Name = "EditAd";
-            this.EditAd.Size = new System.Drawing.Size(56, 19);
+            this.EditAd.Size = new System.Drawing.Size(75, 23);
             this.EditAd.TabIndex = 16;
             this.EditAd.Text = "Edit ad";
             this.EditAd.UseVisualStyleBackColor = true;
             this.EditAd.Click += new System.EventHandler(this.EditAd_Click);
             // 
+            // trainSimulatorToolStripMenuItem
+            // 
+            this.trainSimulatorToolStripMenuItem.Name = "trainSimulatorToolStripMenuItem";
+            this.trainSimulatorToolStripMenuItem.Size = new System.Drawing.Size(123, 24);
+            this.trainSimulatorToolStripMenuItem.Text = "Train Simulator";
+            // 
             // MetroStationBoard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(578, 437);
+            this.ClientSize = new System.Drawing.Size(771, 538);
             this.Controls.Add(this.EditAd);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.contolPanelLabel);
             this.Controls.Add(this.addonsMenu);
             this.MainMenuStrip = this.addonsMenu;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MetroStationBoard";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.addonsMenu.ResumeLayout(false);
@@ -155,6 +161,7 @@ namespace Metro_station_board
         private System.Windows.Forms.ToolStripMenuItem ForecastToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button EditAd;
+        private System.Windows.Forms.ToolStripMenuItem trainSimulatorToolStripMenuItem;
     }
 }
 
