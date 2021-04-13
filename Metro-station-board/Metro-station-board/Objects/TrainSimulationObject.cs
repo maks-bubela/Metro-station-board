@@ -1,13 +1,15 @@
-﻿using Metro_station_board.Repository;
+﻿using Metro_station_board.Interfaces;
+using Metro_station_board.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Metro_station_board.Objects
 {
-    class TrainSimulationObject
+    class TrainSimulationObject : IAddons
     {
         ObjectSensor sensor;
         ObjectTrain train;
@@ -40,6 +42,10 @@ namespace Metro_station_board.Objects
                 violetRepository.addToDB(sensor.GetDispatchTime(), sensor.GetArriveTime(),dispatchPoint,endPoint);
             }
 
+        }
+
+        public void getUI(Form form, MenuStrip addonsMenu)
+        {
         }
 
     }
