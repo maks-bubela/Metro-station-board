@@ -1,7 +1,7 @@
 ﻿
 namespace Metro_station_board
 {
-    interface IObjectTransport
+    public interface IObjectTransport
     {
         string GetDispatchPoint();
         string GetEndPoint();

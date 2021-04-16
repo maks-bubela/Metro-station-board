@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace Metro_station_board.Repository
 {
-    class VioletRepository : IVioletRepository
+    public class VioletRepository : IVioletRepository
     {
         private MetroStationBoardContext violationContext;
         public VioletRepository(MetroStationBoardContext violationContext)

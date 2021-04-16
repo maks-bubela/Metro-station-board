@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Metro_station_board.Interfaces
 {
-    interface IVioletRepository
+    public interface IVioletRepository
     {
         void addToDB(TimeSpan arriveTime, TimeSpan dispatchTime, string dispatchPoint, string endPoint);
         void changeRecord(int id, string columnName, string changeData);

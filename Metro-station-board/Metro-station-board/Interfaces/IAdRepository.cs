@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Metro_station_board.Interfaces
 {
-    interface IAdRepository
+    public interface IAdRepository
     {
         void addToDB(string ad);
         void changeRecord(int id, string changeData);

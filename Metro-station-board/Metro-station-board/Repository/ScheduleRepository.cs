@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace Metro_station_board.Repository
 {
-    class ScheduleRepository : IScheduleRepository
+    public class ScheduleRepository : IScheduleRepository
     {
         private MetroStationBoardContext scheduleContext;
         public ScheduleRepository(MetroStationBoardContext scheduleContext)
