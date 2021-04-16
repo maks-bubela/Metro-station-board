@@ -1,15 +1,11 @@
 ﻿using Autofac;
 using Metro_station_board.Interfaces;
-using Metro_station_board.Service;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Metro_station_board.Repository;
+using MSB.Service;
 
 namespace Metro_station_board.Modules
 {
-    class ServiceModule : Module
+    public class ServiceModule : Module
     {
         protected override void Load(ContainerBuilder builder)
         {
