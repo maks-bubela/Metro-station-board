@@ -1,6 +1,7 @@
 ﻿using Metro_station_board.Context;
 using Metro_station_board.Interfaces;
 using Metro_station_board.Model;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Metro_station_board.Repository
@@ -46,6 +47,11 @@ namespace Metro_station_board.Repository
         public bool isEmpty()
         {
             return adContext.adModels.Count() == 0;
+        }
+
+        public List<AdModel> getData()
+        {
+            return (adContext.adModels.ToList());
         }
     }
 }

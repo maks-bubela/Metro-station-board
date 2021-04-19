@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Metro_station_board.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,5 +13,6 @@ namespace Metro_station_board.Interfaces
         void changeRecord(int id, string changeData);
         void deleteFromDB(int id);
         bool isEmpty();
+        List<AdModel> getData();
     }
 }
