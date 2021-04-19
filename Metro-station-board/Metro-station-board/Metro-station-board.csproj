@@ -129,7 +129,6 @@
       <DependentUpon>EditAd.cs</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\IAddons.cs" />
-    <Compile Include="Interfaces\IDataService.cs" />
     <Compile Include="MetroStationBoard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,7 +136,6 @@
       <DependentUpon>MetroStationBoard.cs</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\IObjectTransport.cs" />
-    <Compile Include="Modules\ServiceModule.cs" />
     <Compile Include="Objects\ControlPanelObject.cs" />
     <Compile Include="Objects\ForecastObject.cs" />
     <Compile Include="Objects\ObjectSensor.cs" />
@@ -146,7 +144,6 @@
     <Compile Include="Objects\WeatherObject.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service\DataService.cs" />
     <Compile Include="Train Simulator.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,9 +186,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MSB.Autofac\MSB.Autofac.csproj">
+      <Project>{9D9FB50A-5CE0-4862-A467-3E2847CE556A}</Project>
+      <Name>MSB.Autofac</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MSB.DataLogic\MSB.DataLogic.csproj">
       <Project>{F160E0B6-0958-4747-8F48-648F5DE4DBB5}</Project>
       <Name>MSB.DataLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MSB.Services\MSB.Services.csproj">
+      <Project>{C5BDC8A0-8ED7-441D-A45D-4891602C39C7}</Project>
+      <Name>MSB.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
