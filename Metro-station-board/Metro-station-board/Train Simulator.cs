@@ -1,21 +1,8 @@
 ﻿using Autofac;
-using Metro_station_board.Context;
 using Metro_station_board.Interfaces;
 using Metro_station_board.Objects;
-using Metro_station_board.Repository;
-
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.Entity;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-
-using MSB.Service;
 using MSB.Autofac;
 
 namespace Metro_station_board

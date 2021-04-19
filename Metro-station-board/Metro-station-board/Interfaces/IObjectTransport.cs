@@ -1,5 +1,4 @@
-﻿
-namespace Metro_station_board
+﻿namespace Metro_station_board
 {
     public interface IObjectTransport
     {

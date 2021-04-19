@@ -1,6 +1,6 @@
-﻿using Metro_station_board.Context;
+﻿using Autofac;
 using Metro_station_board.Interfaces;
-using Metro_station_board.Model;
+using Metro_station_board.Modules;
 using Metro_station_board.Objects;
 using System;
 using System.Collections;
@@ -10,26 +10,25 @@ using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+using MSB.Autofac;
+using MSB.Service;
 
 namespace Metro_station_board
 {
     public partial class MetroStationBoard : Form
     {
         private static int adAmount = 0;
-        private MetroStationBoardContext context = new MetroStationBoardContext();
         private List<string> list;
-
         public MetroStationBoard()
         {
             InitializeComponent();
             CreateAdList();
             GenerateContent();
-            dataGridView1.DataSource = FillData();
         }
 
         private void CreateAdList()
         {
-            list = (from e in context.adModels select e.ad).ToList();
+            //list = (from e in context.adModels select e.ad).ToList();
         }
         private void AddAd_Click(object sender, EventArgs e)
         {
@@ -57,6 +56,7 @@ namespace Metro_station_board
         }
         private void GenerateContent()
         {
+            /*
             if (adAmount <= context.adModels.Count() - 1)
             {
                 adLabel.Left = panel1.Right;
@@ -67,6 +67,7 @@ namespace Metro_station_board
             {
                 adAmount = 0;
             }
+            */
         }
 
         private void addonsMenu_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -92,11 +93,13 @@ namespace Metro_station_board
             dt.Columns.Add("endPoint");
             dt.Columns.Add("dispatchTime");
             dt.Columns.Add("arriveTime");
-            var data = context.scheduleModels.ToList();
+            /*
+            /var data = context.scheduleModels.ToList();
             foreach (var oItem in data)
             {               
                 dt.Rows.Add(new object[] { oItem.dispatchPoint, oItem.endPoint, oItem.dispatchTime, oItem.arriveTime });
             }       
+            */
             return dt;
         }
         

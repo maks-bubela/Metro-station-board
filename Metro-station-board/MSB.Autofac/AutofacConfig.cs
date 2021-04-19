@@ -1,9 +1,7 @@
 ﻿using Autofac;
 using Autofac.Integration.Mvc;
 using Metro_station_board.Context;
-using Metro_station_board.Interfaces;
 using Metro_station_board.Modules;
-using Metro_station_board.Repository;
 using MSB.Services.Modules;
 using System.Web.Mvc;
 
