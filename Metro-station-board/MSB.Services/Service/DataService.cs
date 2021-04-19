@@ -13,27 +13,29 @@ namespace MSB.Service
     public class DataService : IDataService
     {
         //AdRepository adRepository;
-        ScheduleRepository scheduleRepository;
-        VioletRepository violetRepository;
+        IScheduleRepository scheduleRepository;
+        IVioletRepository violetRepository;
         private readonly IAdRepository adRepository;
-        public DataService(IAdRepository ad)
+        public DataService(IAdRepository ad,IScheduleRepository schedule, IVioletRepository violet )
         {
             adRepository = ad ?? throw new ArgumentNullException(nameof(ad));
+            scheduleRepository = schedule ?? throw new ArgumentNullException(nameof(ad));
+            violetRepository = violet ?? throw new ArgumentNullException(nameof(ad));
         }
 
-        public DataService(IVioletRepository violet)
+        public List<AdModel> getAdData()
         {
-            violetRepository = (VioletRepository)violet;
+            return (adRepository.getData());
         }
 
-        public DataService(IScheduleRepository schedule)
+        public List<ScheduleModel> getScheduleData()
         {
-            scheduleRepository = (ScheduleRepository)schedule;
+            return (scheduleRepository.getData());
         }
 
-        public List<AdModel> getData()
+        public List<ViolationModel> getVioletionData ()
         {
-            return (adRepository.getAdData());
+            return (violetRepository.getData());
         }
     }
 }
