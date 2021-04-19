@@ -1,7 +1,9 @@
 ﻿using Autofac;
 using Metro_station_board.Context;
-using Metro_station_board.Model;
+using Metro_station_board.Interfaces;
 using Metro_station_board.Objects;
+using Metro_station_board.Repository;
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +15,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using MSB.Service;
+using MSB.Autofac;
+
 namespace Metro_station_board
 {
     public partial class Train_Simulator : Form
@@ -22,8 +27,8 @@ namespace Metro_station_board
         {
             InitializeComponent();
             var container = AutofacConfig.ConfigureContainer();
-            var service = container.Resolve<MetroStationBoardContext>();
-            dataGridView1.DataSource = service.scheduleModels.ToList();
+            var dataService = container.Resolve<IDataService>();
+            dataGridView1.DataSource = dataService.getScheduleData();
         }
 
         private void button1_Click(object sender, EventArgs e)
